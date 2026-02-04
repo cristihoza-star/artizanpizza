@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Artizan Pizza Cluj Napoca</title>
+	<style>
+ul, nav, body, h1, h2, h4, h6, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+a, button { transition: all 0.3s ease; }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #e9ecef;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tm-container-inner,
+.tm-container-inner-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-lg-3,
+.col-lg-4,
+.col-lg-6,
+.col-md-4,
+.col-md-6,
+.col-sm-6, 
+.col-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Header and Navigation */
+.placeholder {
+  width: 100%;
+  min-height: 460px;
+}
+
+.parallax-window {
+  min-height: 460px;
+  background: url('img/simple-house-01.jpeg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.tm-header {
+  position: absolute;
+  top: auto;
+  bottom: 20px;
+  left: 20px;
+  width: auto;
+  z-index: 1000;
+  align-items: flex-start;
+}
+
+.tm-header-title {
+  color: white;
+  font-size: 3rem;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* Welcome section */
+.tm-welcome-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.tm-section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Gallery */
+.tm-gallery {
+  padding: 40px 0;
+}
+
+.tm-gallery-page {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.pizza-gallery-item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.pizza-gallery-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.pizza-gallery-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.pizza-gallery-description {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.pizza-gallery-price {
+  font-weight: bold;
+  color: #09C;
+}
+
+/* FAQ */
+.tm-faq {
+  padding-top: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.tm-faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tm-faq-list li {
+  margin-bottom: 20px;
+}
+
+.tm-faq-list li strong {
+  color: #09C;
+}
+
+/* Contact */
+.tm-contact-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tm-footer {
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.tm-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tm-social-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.tm-social-link:hover {
+  background-color: #e9ecef;
+}
+
+.tm-whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.tm-whatsapp-btn:hover {
+  background-color: #128c7e;
+}
+
+.tm-contact-link {
+  display: block;
+  margin: 5px 0;
+}
+
+.tm-delivery-section {
+  padding: 30px 0;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  margin-bottom: 20px;
+}
+
+.tm-delivery-text {
+  font-size: 1.1rem;
+  color: #856404;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.tm-delivery-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tm-delivery-link:hover {
+  text-decoration: underline;
+}
+	</style>
+	<script src="produse.js"></script>
+</head>
+<!--
+
+-->
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window">
+				<div class="tm-header">
+					<h1 class="tm-header-title">Artizan Pizza</h1>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<!-- Delivery Info -->
+			<div class="row tm-delivery-section">
+				<div class="col-12 text-center">
+					<p class="tm-delivery-text">
+						Livrăm la domiciliu exclusiv prin Bolt Food și Wolt.<br>
+						Pentru comenzi accesați paginile noastre din aceste platforme:<br>
+						<a href="https://food.bolt.eu/en/297-cluj-napoca/p/29976-artizan-pizza/" target="_blank" class="tm-delivery-link">Bolt Food</a> | 
+						<a href="https://wolt.com/ro/rou/cluj-napoca/restaurant/artizan-pizza-67d4406b9ea3dd78e9dde2e4" target="_blank" class="tm-delivery-link">Wolt</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Gallery -->
+			<div id="acasa" class="row tm-gallery">
+				<div id="gallery-container" class="tm-gallery-page">
+				</div>
+			</div>
+
+			<!-- FAQ Section -->
+			<div class="tm-container-inner-2 tm-info-section">
+				<div class="row">
+					<div class="col-12 tm-faq">
+						<h2 class="text-center tm-section-title">Întrebări Frecvente</h2>
+						<p class="text-center">Această secțiune conține întrebări frecvente despre Artizan Pizza.</p>
+						<ul class="tm-faq-list">
+							<li><strong>1. Ce ingrediente folosiți pentru pizza?</strong><br>Folosim ingrediente proaspete și organice pentru a asigura cea mai bună calitate și gust autentic.</li>
+							<li><strong>2. Aveți opțiuni pentru vegetarieni?</strong><br>Da, avem o varietate de pizza vegetariene cu legume proaspete și brânzeturi fine.</li>
+							<li><strong>3. Cum pot comanda pizza online?</strong><br>Puteți comanda prin telefon la 0264-123-456 sau vizitând restaurantul nostru.</li>
+							<li><strong>4. Care sunt orele de funcționare?</strong><br>Suntem deschiși de la 11:00 la 23:00 în fiecare zi a săptămânii.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact Section -->
+
+			<div class="tm-container-inner-2 tm-contact-section">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="tm-address-box">
+							<h4 class="tm-info-title tm-text-success">Contact:</h4>
+							<address>
+								Strada Ciobanului 2, Cluj-Napoca, România
+							</address>
+							<a href="tel:0745.637.032" class="tm-contact-link">
+								📞 0745.637.032
+							</a>
+							<a href="mailto:contact@artizanpizza.ro" class="tm-contact-link">
+								✉ contact@artizanpizza.ro
+							</a>
+							<a href="https://wa.me/40745637032" class="tm-contact-link tm-whatsapp-btn" target="_blank">
+								💬 WhatsApp
+							</a>
+							<div class="tm-location-link">
+								<a href="https://maps.google.com/?q=Strada+Ciobanului+2,+Cluj-Napoca+400110,+Romania" class="tm-contact-link" target="_blank">
+									📍 Vezi locația pe hartă
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			</div>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const container = document.getElementById('gallery-container');
+				products.forEach(product => {
+					const article = document.createElement('article');
+					article.className = 'col-lg-3 col-md-4 col-sm-6 col-12 pizza-gallery-item';
+					article.innerHTML = `
+						<figure>
+							<img src="${product.img}" alt="Image" class="img-fluid pizza-gallery-img" />
+							<figcaption>
+								<h4 class="pizza-gallery-title">${product.title}</h4>
+								<p class="pizza-gallery-description">${product.desc}</p>
+								<p class="pizza-gallery-price">${product.price}</p>
+							</figcaption>
+						</figure>
+					`;
+					container.appendChild(article);
+				});
+			});
+		</script>
+		</main>
+
+		<footer class="tm-footer text-center">
+			<div class="tm-social-links">
+				<a href="https://instagram.com/artizanpizza" class="tm-social-link" target="_blank">📷 Instagram</a>
+				<a href="https://facebook.com/artizanpizza" class="tm-social-link" target="_blank">📘 Facebook</a>
+				<a href="https://tiktok.com/@artizanpizza" class="tm-social-link" target="_blank">🎵 TikTok</a>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
